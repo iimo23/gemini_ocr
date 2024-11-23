@@ -4,8 +4,8 @@
 
 1-Clone the repository:
 ```
-git clone https://github.com/username/repository-name.git
-cd repository-name
+git clone https://github.com/Alnuzaili/gemini_ocr.git
+cd gemini_ocr
 ```
 
 2-Create and activate a virtual environment (optional but recommended):
