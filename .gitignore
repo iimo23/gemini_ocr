@@ -162,5 +162,9 @@ cython_debug/
 #.idea/
 
 uploads/
+output.7z
+outputs.7z
 output/
+pro-output/
+flash-output/
 images/

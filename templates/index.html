@@ -24,8 +24,21 @@
             id="file"
             name="file"
             accept="file/*"
-            class="mt-1 block w-full text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded cursor-pointer"
+            class="mt-1 block w-full text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded cursor-pointer p-2"
           />
+        </div>
+        <!-- Invoice Type Dropdown -->
+        <div>
+          <label for="invoice_type" class="block text-gray-700 font-semibold">Select Invoice Type</label>
+          <select
+            id="invoice_type"
+            name="invoice_type"
+            class="mt-1 block w-full text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded p-2"
+          >
+            {% for invoice_type in ALLOWED_INVOICE_TYPES %}
+            <option value="{{ invoice_type }}">{{ invoice_type }}</option>
+            {% endfor %}
+          </select>
         </div>
         <button
           type="submit"
