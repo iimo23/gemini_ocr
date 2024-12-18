@@ -31,15 +31,16 @@ def allowed_file(filename):
 
 def selectInvoiceType(invoice_type):
     filename = f"prompts/{invoice_type}.txt"
-    filepath = os.path.join(os.path.dirname(__file__), filename) # Get absolute path
+    filepath = os.path.join(os.path.dirname(__file__), filename)  # Get absolute path
     if invoice_type in ALLOWED_INVOICE_TYPES:
         try:
-            with open(filepath, 'r') as f:
+            with open(filepath, 'r', encoding='utf-8') as f:  # Explicitly specify UTF-8 encoding
                 prompt = f.read().strip()  # Read and remove leading/trailing whitespace
                 return prompt
         except FileNotFoundError:
             return f"Prompt file '{filename}' not found."
-
+        except UnicodeDecodeError as e:
+            return f"Encoding error while reading '{filename}': {str(e)}"
 
 
 @app.route("/", methods=["GET","POST"])

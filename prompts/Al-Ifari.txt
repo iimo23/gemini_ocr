@@ -5,14 +5,14 @@ Read both arabic and english data and compare between them to extract the most a
 
 ### Instructions for Table Extraction:
 1. The table has specific columns with Arabic headers. These columns must be mapped as follows:
-   - "رقم الصنف" → id (Item ID).
-   - "اسم الصنف" → item_description_arabic (Arabic description).
+   - "رقم الصنف" = id (Item ID).
+   - "اسم الصنف" = item_description_arabic (Arabic description).
    - Use any corresponding English description, if present, for item_description_english.
-   - "الكمية" → quantity (Quantity of the item).
-   - "السعر" → unit_price (Price per unit).
-   - "المجموع" → total_price (Total price without tax).
-   - "نسبة الضريبة" → tax_percentage_per_item (Tax percentage).
-   - "المجموع الأساسي" → total_price_with_tax (Total price including tax).
+   - "الكمية" = quantity (Quantity of the item).
+   - "السعر" = unit_price (Price per unit).
+   - "المجموع" = total_price (Total price without tax).
+   - "نسبة الضريبة" = tax_percentage_per_item (Tax percentage).
+   - "المجموع الأساسي" = total_price_with_tax (Total price including tax).
 2. Extract **only** the numeric value under "الكمية" for the **quantity** field. Do not confuse it with "المجموع" or other columns.
 
 
